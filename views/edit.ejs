@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>WhatToDo | Edit</title>
+  </head>
+  <body>
+    <h1>Edit Todo</h1>
+    <form action="/todos/<%=id%>?_method=PUT" method="POST">
+      <h4>Title</h4>
+      <input type="text" name="title" value="<%=todos.title%>" />
+      <h4>Due Date</h4>
+      <input type="date" name="due" value="<%=todos.due%>" />
+      <h4>Task</h4>
+      <input type="text" name="task" value="<%=todos.task%>" />
+      <button type="submit">Edit Task</button>
+    </form>
+  </body>
+</html>

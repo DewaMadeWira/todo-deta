@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>WhatToDo | Todos</title>
+  </head>
+  <body>
+    <h1>All Todos</h1>
+    <h3><%= todos.title %></h3>
+    <h4><%= todos.due %></h4>
+    <p><%= todos.task%></p>
+    <!-- <% for(var i=0; i<todos.length; i++) {%>
+        <h3><%= todos.title %></h3>
+        <h4><%= todos.due %></h4>
+        <p><%= todos[i].task%></p>
+     <% } %> -->
+    <form action="/todos/<%= todos.key%>?_method=DELETE" method="POST">
+      <button type="submit">Delete</button>
+    </form>
+  </body>
+</html>
